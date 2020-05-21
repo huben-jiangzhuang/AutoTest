@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="thread" parallel="instances" thread-count="2">
+   <!--parallel参数的值有：false，methods，tests，classes，instances。默认false
+parallel=false，不执行并发操作，
+parallel必须和thread-count配套使用，否则相当于无效参数，thread-count决定了并行测试时开启的线程数量。
+   parallel="methods":所有方法都在不同的线程下执行
+   parallel="tests":不同的test tag下的用例在不同的线程中执行，相同test tag下用同一个线程。
+  parallel="classes":不同class tag下在不同线程中执行，相同class tag下用同一个线程。
+   parallel="instances" TestNG将并行执行相同实例下的所有方法在不同的线程里
+   -->
+    <test name="demo">
+        <classes>
+            <class name="com.course.testng.multiThread.MultiThread"/>
+            <!--class name="com.course.testng.IgnoreTest"/-->
+        </classes>
+    </test>
+</suite>
